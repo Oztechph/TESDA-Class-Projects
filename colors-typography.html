@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Colors and Typography</title>
+	</head>
+	<body class="grey darken-4">
+		<h1 class="blue-text center text-darken-1">Typography</h1>
+
+		<br />
+
+		<div class="divider"></div>
+
+		<div class="container">
+			<h3 class="blue-text text-lighten-2">Headers</h3>
+			<p class="white-text">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla porro
+				incidunt ipsam ad. Labore deleniti nihil at libero aspernatur amet
+				officia eaque. Quas expedita quam aspernatur tempore ea, illo ipsam.
+			</p>
+			<div class="card-panel blue white-text">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+			</div>
+			<br />
+			<h3 class="blue-text text-lighten-1">Blockquote</h3>
+			<blockquote class="card-panel transparent white-text">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia
+				doloremque nisi accusamus laborum magni vitae consequatur atque nulla
+				quisquam inventore, quis dolorum iure in labore similique suscipit
+				dolore corrupti.
+			</blockquote>
+			<br />
+			<h3 class="blue-text">Flow Text</h3>
+			<div id="blockquote" class="section scrollspy">
+				<a id="toggleFlowTextBtn" class="btn waves-effect wave-light"
+					>Toggle Flow-text</a
+				>
+				<div>
+					<!-- First paragraph with flow-text -->
+					<p id="first-flow-text" class="flow-text white-text">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit ullam
+						doloribus iste nulla enim modi vel distinctio minus? Itaque quam
+						tenetur placeat possimus cumque vel nemo, voluptatem unde fugiat
+						debitis et accusantium tempore excepturi dolore atque, voluptates
+						ducimus facilis laudantium, deleniti doloremque. Laudantium possimus
+						ex pariatur sed. Vel, excepturi dolorum.
+					</p>
+					<!-- Second paragraph with flow-text -->
+					<p id="flow-text-example" class="flow-text white-text">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+						libero tempore eum quas excepturi temporibus molestiae laudantium
+						enim adipisci dolor, at itaque unde officia aspernatur numquam sequi
+						iusto mollitia similique.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script>
+			// Toggle the flow-text class on both paragraphs when the button is clicked
+			document
+				.getElementById("toggleFlowTextBtn")
+				.addEventListener("click", function () {
+					var firstParagraph = document.getElementById("first-flow-text");
+					var secondParagraph = document.getElementById("flow-text-example");
+
+					// Toggle the flow-text class for both paragraphs
+					firstParagraph.classList.toggle("flow-text");
+					secondParagraph.classList.toggle("flow-text");
+				});
+		</script>
+	</body>
+</html>

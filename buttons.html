@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Buttons-Activity</title>
+		<!-- fontawesome link -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+
+		<!-- Include Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="row">
+			<div class="cols s9 m9">
+				<h1
+					class="blue-text center text-darken-1"
+					style="text-transform: capitalize"
+				>
+					Buttons
+				</h1>
+				<div class="divider blue"></div>
+				<br />
+				<div class="container">
+					<p>
+						There are 3 main button types described in material design. The
+						raised button is a standard button that signify actions and seek to
+						give depth to a mostly flat page. The floating circular action
+						button is meant for very important functions. Flat buttons are
+						usually used within elements that already have depth like cards or
+						modals.
+					</p>
+					<br />
+
+					<h3 class="blue-text text-lighten-1">Raised</h3>
+
+					<!-- Default button -->
+					<p>This is a default button.</p>
+					<a class="waves-effect waves-light btn">Button</a>
+					<p>This is a button with left icon.</p>
+					<a class="waves-effect waves-light btn"
+						><i class="material-icons left">cloud</i>button</a
+					>
+					<p>This is a button with right icon.</p>
+					<a class="waves-effect waves-light btn"
+						><i class="material-icons right">cloud</i>button</a
+					>
+					<br />
+
+					<!-- Floating button -->
+					<h3 class="blue-text text-lighten-1">Floating</h3>
+					<p>This is a floating button.</p>
+					<a class="btn-floating btn-large waves-effect waves-light blue"
+						><i class="fas fa-plus"></i
+					></a>
+					<br />
+
+					<!-- Flat button -->
+					<h3 class="blue-text text-lighten-1">Flat</h3>
+					<p>
+						Flat buttons are used to reduce excessive layering. For example,
+						flat buttons are usually used for actions within a card or modal so
+						there aren't too many overlapping shadows.
+					</p>
+
+					<p>This is a flat button.</p>
+					<a class="waves-effect waves-teal btn-flat blue-text">Button</a>
+					<br />
+					<!-- Submit button -->
+					<h3 class="blue-text text-lighten-1">Submit button</h3>
+					<p>
+						When you use a button to submit a form, instead of using a input
+						tag, use a button tag with a type submit
+					</p>
+					<br />
+					<p>This is a submit button.</p>
+					<button
+						class="btn waves-effect waves-light"
+						type="submit"
+						name="action"
+					>
+						Submit
+						<i class="material-icons right">send</i>
+					</button>
+
+					<br />
+
+					<!-- Large button -->
+					<h3 class="blue-text text-lighten-1">Large</h3>
+					<p>
+						This button has a larger height for buttons that need more
+						attention.
+					</p>
+					<a class="waves-effect waves-light btn-large">Button</a>
+					<br />
+
+					<!-- Small button -->
+					<h3 class="blue-text text-lighten-1">Small</h3>
+					<p>
+						When mouse and keyboard are the primary input methods, this smaller
+						button is useful for denser UI layouts.
+					</p>
+					<a class="waves-effect waves-light btn-small">Button</a>
+					<br />
+
+					<!-- Disabled button -->
+					<h3 class="blue-text text-lighten-1">Disabled</h3>
+					<p>
+						This style can be applied to all button types. <br />
+						<br />
+						This is a disabled button with Large height.
+					</p>
+					<a class="btn-large disabled">Button</a>
+					<br />
+					<p>This is a disabled button made with floating button.</p>
+					<a class="btn-floating disabled"><i class="material-icons">add</i></a>
+				</div>
+
+				<br />
+
+				<h1
+					class="blue-text center text-darken-1"
+					style="text-transform: capitalize"
+				>
+					Floating Action Button
+				</h1>
+				<div class="divider blue"></div>
+				<br />
+
+				<div class="container">
+					<p>
+						If you want a fixed floating action button, you can add multiple
+						actions that will appear on hover. Our demo is in the bottom
+						righthand corner of the page.
+					</p>
+					<br />
+					<h3 class="blue-text text-lighten-1">Horizontal FAB</h3>
+					<p>
+						Creating a horizontal FAB is easy! Just set the direction option.
+					</p>
+					<br />
+					<h3 class="blue-text text-lighten-1">Click-only FAB</h3>
+					<p>
+						If you want to disable the hover behaviour, and instead toggle the
+						FAB menu when the user clicks on the large button (works great on
+						mobile!), just add the "click-to-toggle" class to the FAB.
+					</p>
+					<br />
+					<h3 class="blue-text text-lighten-1">FAB to Toolbar</h3>
+					<p>
+						Instead of displaying individual button options, you can transition
+						your FAB into a toolbar on click. Just add the "toolbar" class to the
+						FAB.
+					</p>
+					<br />
+				</div>
+				<!-- Floating Action Button -->
+				<div class="fixed-action-btn">
+					<a class="btn-floating btn-large blue">
+						<i class="large material-icons">mode_edit</i>
+					</a>
+					<ul>
+						<li>
+							<a class="btn-floating red"
+								><i class="material-icons">insert_chart</i></a
+							>
+						</li>
+						<li>
+							<a class="btn-floating green"
+								><i class="material-icons">format_quote</i></a
+							>
+						</li>
+						<li>
+							<a class="btn-floating brown"
+								><i class="material-icons">publish</i></a
+							>
+						</li>
+						<li>
+							<a class="btn-floating purple"
+								><i class="material-icons">attach_file</i></a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Initialize the Floating Action Button and store the instance globally
+				const elem = document.querySelector(".fixed-action-btn");
+				window.instance = M.FloatingActionButton.init(elem, {
+					direction: "top",
+					hoverEnabled: false,
+				});
+				// Automatically open the Floating Action Button menu on page load
+				// instance.open();
+			});
+		</script>
+		<!-- Include Materialize JavaScript (optional, for any JavaScript components) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
+</html>

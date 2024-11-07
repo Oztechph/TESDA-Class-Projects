@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Materialize CSS Grid Presentation - Creating Layouts</title>
+		<!-- Include Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<!-- Container to center and pad the content -->
+			<h1 class="blue-text center text-darken-1">Grid</h1>
+
+			<!-- Top Divider -->
+			<div class="divider blue"></div>
+			<p>
+				We are using a standard 12 column fluid responsive grid system. The grid
+				helps you layout your page in an ordered, easy fashion.
+			</p>
+
+			<h3 class="blue-text text-lighten-2">Container</h3>
+			<p>
+				The container class is not strictly part of the grid but is important in
+				laying out content. It allows you to center your page content. The
+				container class is set to ~70% of the window width. It helps you center
+				and contain your page content. We use the container to contain our body
+				content
+			</p>
+			<h5>Demo</h5>
+			<p>
+				Try the button below to see what the page looks like without containers.
+			</p>
+			<a
+				href="#"
+				id="container-toggle-button"
+				class="btn waves-effect waves-light"
+				style="margin-bottom: 20px"
+				onclick="toggleContainer()"
+				>Turn Off</a
+			>
+
+			<div
+				id="mini-container"
+				class="mini-container"
+				style="
+					height: 250px;
+					background-color: #58e023;
+					overflow: hidden;
+					transition: all 0.3s ease;
+				"
+			>
+				<div
+					id="content-container"
+					class="row"
+					style="
+						padding: 20px;
+						text-align: center;
+						transition: transform 0.3s ease;
+					"
+				>
+					<div
+						class="col s4 offset-s4"
+						style="
+							align-content: center;
+							height: 40px;
+							background-color: #2088b9;
+							font-weight: 500;
+							color: #80f552;
+						"
+					>
+						This is a content
+					</div>
+					<div
+						class="col s12"
+						style="
+							align-content: center;
+							height: 40px;
+							background-color: #208abc;
+							margin-bottom: 18px;
+							margin-top: 16px;
+							font-weight: 500;
+							color: #80f552;
+						"
+					>
+						This is a content
+					</div>
+					<div
+						class="col s12"
+						style="
+							align-content: center;
+							height: 40px;
+							background-color: #208abc;
+							margin-bottom: 18px;
+							font-weight: 500;
+							color: #80f552;
+						"
+					>
+						This is a content
+					</div>
+					<div
+						class="col s12"
+						style="
+							align-content: center;
+							height: 40px;
+							background-color: #208abc;
+							margin-bottom: 18px;
+							font-weight: 500;
+							color: #80f552;
+						"
+					>
+						This is a content
+					</div>
+				</div>
+			</div>
+
+			<script>
+				function toggleContainer() {
+					const contentContainer = document.getElementById("content-container");
+					const button = document.getElementById("container-toggle-button");
+
+					// Toggle the transform scaleX of the content inside the container to shrink only width
+					if (contentContainer.style.transform === "scaleX(0.85)") {
+						contentContainer.style.transform = "scaleX(1)"; // Reset to normal width
+						button.innerText = "Turn On";
+					} else {
+						contentContainer.style.transform = "scaleX(0.85)"; // Shrink the width only
+						button.innerText = "Turn Off";
+					}
+				}
+			</script>
+
+			<p>
+				To add a container just put your content inside a "div" tag with a
+				container class. Here's an example of how your page might be set up.
+			</p>
+			<br />
+			<!-- End of Container Section -->
+
+			<h3 class="blue-text text-lighten-2">Introduction</h3>
+			<p>
+				Take a look at this section to quickly understand how the grid works!
+			</p>
+			<h5>12 Columns</h5>
+			<p>
+				Our standard grid has 12 columns. No matter the size of the browser,
+				each of these columns will always have an equal width.
+			</p>
+			<!-- 12 Columns example -->
+			<div class="row">
+				<div class="blue col s1">1</div>
+				<div class="red col s1">2</div>
+				<div class="blue col s1">3</div>
+				<div class="red col s1">4</div>
+				<div class="blue col s1">5</div>
+				<div class="red col s1">6</div>
+				<div class="blue col s1">7</div>
+				<div class="red col s1">8</div>
+				<div class="blue col s1">9</div>
+				<div class="red col s1">10</div>
+				<div class="blue col s1">11</div>
+				<div class="red col s1">12</div>
+			</div>
+			<h5>Columns live inside Rows</h5>
+			<p>
+				Remember when you are creating your layout that all columns must be
+				contained inside a row and that you must add the col class to your inner
+				divs to make them into columns.
+			</p>
+			<!-- Columns live inside Rows Example -->
+			<div class="row center" style="font-size: 20px">
+				<div class="col blue s12">
+					This div is 12-columns wide on all screen sizes
+				</div>
+				<div class="col red s6">6-columns (one-half)</div>
+				<div class="col green s6">6-columns (one-half)</div>
+			</div>
+			<br />
+			<!-- End of Introduction -->
+
+			<h3 class="blue-text text-lighten-2">Offsets</h3>
+			<p>
+				To offset, simply add offset-s2 to the class where s signifies the
+				screen class-prefix (s = small, m = medium, l = large) and the number
+				after is the number of columns you want to offset by.
+			</p>
+			<div class="row">
+				<div class="col blue s12">
+					<span class="flow-text"
+						>This div is 12-columns wide on all screen sizes</span
+					>
+				</div>
+				<div class="col red s6 offset-s6">
+					<span class="flow-text">6-columns (offset-by-6)</span>
+				</div>
+			</div>
+			<br />
+			<!-- End of Offsets -->
+
+			<h3 class="blue-text text-lighten-2">Push and Pull</h3>
+			<p>
+				You can easily change the order of your columns with push and pull.
+				Simply add push-s2 or pull-s2 to the class where s signifies the screen
+				class-prefix (s = small, m = medium, l = large) and the number after is
+				the number of columns you want to push or pull by.
+			</p>
+			<!-- Push and Pull Example -->
+			<div class="row">
+				<div class="col green s7 push-s5">
+					<span class="flow-text"
+						>This div is 7-columns wide on pushed to the right by
+						5-columns.</span
+					>
+				</div>
+				<div class="col blue s5 pull-s7">
+					<span class="flow-text"
+						>5-columns wide pulled to the left by 7-columns.</span
+					>
+				</div>
+			</div>
+			<br />
+			<!-- End of Push and Pull -->
+
+			<h3 class="blue-text text-lighten-2">Creating Layouts</h3>
+			<p>
+				Here we will show you how to create some commonly used layouts with our
+				grid system. Hopefully these will get you more comfortable with laying
+				out elements. To keep these demos simple, the ones here will not be
+				responsive.
+			</p>
+			<h5>Example Sections & Dividers</h5>
+			<br />
+			<div class="row">
+				<div class="col s6">
+					<h5>Section</h5>
+					<p>
+						The section class is used for simple top and bottom padding. Just
+						add the section class to your div's containing large blocks of
+						content.
+					</p>
+				</div>
+				<div class="col s6">
+					<h5>Divider</h5>
+					<p>
+						Dividers are 1 pixel lines that help break up your content. Just add
+						the divider to a div in between your content.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Section and Divider Example -->
+				<!-- Column for Section 1 -->
+				<div class="col s12 m12 l12">
+					<div class="divider blue"></div>
+					<!-- Divider above Section 1 -->
+					<div class="section">
+						<div class="section-content">
+							<span class="section-title">Section 1</span>
+							<p>This is some content for section 1.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column for Section 2 -->
+				<div class="col s12 m12 l12">
+					<div class="divider blue"></div>
+					<!-- Divider above Section 2 -->
+					<div class="section">
+						<div class="section-content">
+							<span class="section-title">Section 2</span>
+							<p>This is some content for section 2.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column for Section 3 -->
+				<div class="col s12 m12 l12">
+					<div class="divider blue"></div>
+					<!-- Divider above Section 3 -->
+					<div class="section">
+						<div class="section-content">
+							<span class="section-title">Section 3</span>
+							<p>This is some content for section 3.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<!-- End of row -->
+
+			<h5>Example Promotion Table</h5>
+
+			<div class="row" style="border: 2px solid #4fc3f7">
+				<div class="col s4">
+					<div class="promo promo-example">
+						<i class="material-icons">flash_on</i>
+						<h5 class="promo-caption">Speeds up development</h5>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Laboriosam nostrum suscipit amet quidem facere voluptatibus.
+						</p>
+					</div>
+				</div>
+
+				<div class="col s4">
+					<div class="center promo promo-example">
+						<i class="material-icons">group</i>
+						<h5 class="promo-caption">User Experience Focused</h5>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Laboriosam nostrum suscipit amet quidem facere voluptatibus.
+						</p>
+					</div>
+				</div>
+
+				<div class="col s4">
+					<div class="right-align promo promo-example">
+						<i class="material-icons">settings</i>
+						<h5 class="promo-caption">Easy to work with</h5>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Laboriosam nostrum suscipit amet quidem facere voluptatibus.
+						</p>
+					</div>
+				</div>
+			</div>
+			<br />
+			<h5>Example Side Navigation Layout</h5>
+			<p>
+				You can see how easy it is to create layouts using the grid system. Just
+				remember to make sure your column numbers add up to 12 for an even
+				layout.
+			</p>
+			<!-- Example Side Navigation Layout -->
+			<div class="row">
+				<!--  navigation panel -->
+				<div
+					class="col s3"
+					style="height: 280px; background-color: rgb(81, 228, 81)"
+				>
+					<div class="nav" style="padding: 20px">
+						<div class="row">
+							<div
+								class="col center s12"
+								style="
+									height: 68px;
+									background-color: rgb(216, 78, 78);
+									margin-bottom: 12px;
+									margin-top: 12px;
+								"
+							></div>
+						</div>
+						<div class="row">
+							<div
+								class="col center s12"
+								style="
+									height: 45px;
+									background-color: rgb(216, 78, 78);
+									margin-bottom: 10px;
+								"
+							></div>
+						</div>
+						<div class="row">
+							<div
+								class="col center s12"
+								style="height: 45px; background-color: rgb(216, 78, 78)"
+							></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- page content  -->
+				<div class="col blue s9" style="height: 280px">
+					<div class="nav" style="padding: 20px">
+						<div class="row">
+							<div
+								class="col center s12"
+								style="
+									height: 40px;
+									background-color: rgb(216, 78, 78);
+									margin-top: 12px;
+								"
+							></div>
+						</div>
+
+						<div class="row">
+							<div
+								class="col center s12"
+								style="height: 40px; background-color: rgb(216, 78, 78)"
+							></div>
+						</div>
+
+						<div class="row">
+							<div
+								class="col center s12"
+								style="height: 40px; background-color: rgb(216, 78, 78)"
+							></div>
+						</div>
+
+						<div class="row">
+							<div
+								class="col center s12"
+								style="height: 40px; background-color: rgb(216, 78, 78)"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<!-- End of Creating Layouts -->
+
+			<h3 class="blue-text text-lighten-2">Creating Responsive Layouts</h3>
+			<p>
+				Above we showed you how to layout elements using our grid system. Now
+				we'll show you how to design your layouts so that they look great on all
+				screen sizes.
+			</p>
+			<h5>Screen Sizes</h5>
+			<table class="highlight">
+				<thead>
+					<tr>
+						<th></th>
+						<th data-field="id">
+							"Mobile Devices "
+							<br />
+							"<= 600px"
+						</th>
+						<th data-field="name">
+							"Tablet Devices "
+							<br />
+							"> 600px"
+						</th>
+						<th data-field="price">
+							"Desktop Devices "
+							<br />
+							"> 992px"
+						</th>
+						<th data-field="price">
+							"Large Desktop Devices "
+							<br />
+							"> 1200px"
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Class Prefix</strong></td>
+						<td><code class="language-markup">.s</code></td>
+						<td><code class="language-markup">.m</code></td>
+						<td><code class="language-markup">.l</code></td>
+						<td><code class="language-markup">.xl</code></td>
+					</tr>
+					<tr>
+						<td><strong>Container Width</strong></td>
+						<td>90%</td>
+						<td>85%</td>
+						<td>70%</td>
+						<td>70%</td>
+					</tr>
+					<tr>
+						<td><strong>Number of Columns</strong></td>
+						<td>12</td>
+						<td>12</td>
+						<td>12</td>
+						<td>12</td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<h5>Adding Responsiveness</h5>
+			<p>
+				In the previous examples, we only defined the size for small screens
+				using "col s12". This is fine if we want a fixed layout since the rules
+				propagate upwards. By just saying s12, we are essentially saying "col
+				s12 m12 l12". But by explicitly defining the size we can make our
+				website more responsive.
+			</p>
+			<!-- Example codes adding responsiveness -->
+			<div class="row">
+				<div
+					class="blue grid-example col s12"
+					style="margin-bottom: 15px; text-align: center"
+				>
+					<span class="flow-text">I am always full-width (col s12)</span>
+				</div>
+				<div
+					class="red grid-example col s12 m6"
+					style="height: 80px; text-align: center; align-content: center"
+				>
+					<span class="flow-text">I am full-width on mobile (col s12 m6)</span>
+				</div>
+			</div>
+			<br />
+
+			<h5>Responsive Side Navigation Layout</h5>
+			<p>
+				In this example below, we take the same layout from above, but we make
+				it responsive by defining how many columns the div should take up on
+				each screen size. Try resizing your browser and watch the layout change
+				below.
+			</p>
+			<div class="row">
+				<div class="red section-1"></div>
+				<div class="section-2"></div>
+				<div class="section-3"></div>
+				<div class="col s12 m4 l3">
+					This content will be: <br />
+					3-columns-wide on large screens, <br />
+					4-columns-wide on medium screens, <br />
+					12-columns-wide on small screens
+				</div>
+			</div>
+			<br />
+			<h5>More Responsive Side Navigation Layout</h5>
+			<div class="row center" style="font-size: 16px; font-weight: 600">
+				<div class="blue col s12" style="margin-bottom: 10px"><p>s12</p></div>
+				<div class="red col s12 m4 l2"><p>s12 m4</p></div>
+				<div class="purple col s12 m4 l8"><p>s12 m4</p></div>
+				<div class="orange col s12 m4 l2"><p>s12 m4</p></div>
+				<div class="yellow col s12 m6 l3" style="margin-top: 10px">
+					<p>s12 m6 l3</p>
+				</div>
+				<div class="yellow col s12 m6 l3" style="margin-top: 10px">
+					<p>s12 m6 l3</p>
+				</div>
+				<div class="yellow col s12 m6 l3" style="margin-top: 10px">
+					<p>s12 m6 l3</p>
+				</div>
+				<div class="yellow col s12 m6 l3" style="margin-top: 10px">
+					<p>s12 m6 l3</p>
+				</div>
+			</div>
+			<br />
+			<!-- End of Responsive Layouts -->
+		</div>
+		<!-- End of container -->
+
+		<!-- jQuery and Materialize JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!-- JavaScript for toggling container class on the row only -->
+		<script>
+			document
+				.getElementById("container-toggle-button")
+				.addEventListener("click", function (event) {
+					event.preventDefault(); // Prevent the default link behavior
+					const rowToToggle = document.getElementById("toggle-row");
+
+					// Toggle the container class on the row
+					rowToToggle.classList.toggle("container");
+
+					// Update the button text based on the current state
+					if (rowToToggle.classList.contains("container")) {
+						this.textContent = "Turn off container";
+					} else {
+						this.textContent = "Turn on container";
+					}
+				});
+		</script>
+	</body>
+</html>

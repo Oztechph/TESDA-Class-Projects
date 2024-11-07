@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive Navbar-Sidenav</title>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<!-- Font Awesome for Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<div class="navbar-container">
+			<nav class="navbar blue">
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo">Logo</a>
+					<a href="#" data-target="mobile-nav" class="sidenav-trigger"
+						><i class="fas fa-bars"></i
+					></a>
+					<ul class="right hide-on-med-and-down">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#login">Log In</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<!-- Side Navigation for Mobile -->
+		<ul class="sidenav center" id="mobile-nav">
+			<a href="#" class="brand-logo blue-text">Logo</a>
+			<div class="divider"></div>
+			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#login">Log In</a></li>
+
+			<!-- Additional content section -->
+			<div class="row" style="margin-top: 20px">
+				<!-- Example of adding text or additional information below the links -->
+				<div class="col s12">
+					<p style="font-size: 18px;">
+						Welcome to my website! Here, you can learn more about me, see my
+						work, and get in touch.
+					</p>
+				</div>
+
+				<!-- Social Media Links -->
+				<div class="col s12">
+					<a href="#social1" class="btn blue" style="font-size: 12px;">Social Links 1</a>
+				</div>
+				<div class="col s6">
+					<a href="#social2" class="btn red" style="font-size: 12px;">Social Links 2</a>
+				</div>
+				<div class="col s6">
+					<a href="#social3" class="btn green" style="font-size: 12px;">Social Links 2</a>
+				</div>
+			</div>
+		</ul>
+
+		<!-- Main Sections -->
+		<section id="home" class="section scrollspy">
+			<div class="container">
+				<h2>Welcome to My Portfolio</h2>
+				<p>
+					This is where your introductory content goes. Lorem ipsum dolor sit
+					amet consectetur adipisicing elit. Doloribus nostrum cupiditate cumque
+					odio, unde laboriosam amet error quasi ullam labore natus, aperiam
+					fugit sapiente suscipit dignissimos quam. Voluptatum, quasi quos
+					dignissimos ipsa modi distinctio tempore voluptates. Repudiandae
+					blanditiis, aliquid veniam autem mollitia nemo quas, enim
+					necessitatibus assumenda est sapiente fugit doloremque eos vel vitae
+					repellendus placeat optio, libero expedita quo iste quisquam eum.
+					Explicabo, delectus. Provident et perferendis architecto nihil quae
+					nobis, ut nam perspiciatis similique pariatur itaque eius eveniet quos
+					natus, quam iste? Alias quisquam velit aliquam asperiores modi
+					laboriosam blanditiis aspernatur, doloremque amet placeat maiores
+					aliquid ducimus perferendis.
+				</p>
+			</div>
+		</section>
+
+		<section id="about" class="section scrollspy">
+			<div class="container">
+				<h2>About Me</h2>
+				<p>
+					Write about yourself, your background, skills, and experience here.
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste
+					repellendus fugit eveniet quo atque corporis, sint dolorem enim a modi
+					laudantium commodi fuga maiores consectetur, perferendis animi illum
+					dolore dolores maxime quis. Neque atque nesciunt autem sapiente
+					voluptate id repellat corporis consectetur aperiam, quas perspiciatis
+					dignissimos voluptates. Quaerat, perferendis possimus.
+				</p>
+			</div>
+		</section>
+
+		<section id="portfolio" class="section scrollspy">
+			<div class="container">
+				<h2>Portfolio</h2>
+				<p>
+					Showcase your projects or work here. Lorem ipsum dolor sit amet
+					consectetur adipisicing elit. Ipsum numquam ullam error sequi
+					quibusdam facere omnis, commodi accusamus earum mollitia accusantium
+					laboriosam, molestiae optio deserunt officia iste beatae doloremque
+					cupiditate corrupti repellendus nobis fugit officiis neque tempora?
+					Expedita atque iusto exercitationem eos sint porro fugiat repellendus
+					rerum vero sed molestiae quae nostrum quibusdam et facilis, architecto
+					modi dicta. Doloremque quidem atque quaerat hic dolorum est.
+					Doloremque, unde ratione optio suscipit recusandae veritatis aperiam
+					quam, inventore excepturi architecto, consequuntur saepe hic tempore
+					natus aliquam. Alias harum dignissimos deserunt soluta expedita!
+					Assumenda, dolore. Consequuntur architecto ratione autem nisi
+					asperiores! Recusandae, optio at.
+				</p>
+			</div>
+		</section>
+
+		<section id="contact" class="section scrollspy">
+			<div class="container">
+				<h2>Contact</h2>
+				<p>
+					Provide your contact information or a form for visitors to reach you.
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
+					facere repudiandae suscipit quo perspiciatis voluptate eaque,
+					obcaecati a quibusdam quas accusantium sunt, laborum, quaerat et. Ab
+					voluptates voluptas consectetur fugit, sunt in iusto iste corrupti
+					natus fuga reiciendis ipsa nulla consequuntur facilis. Quis obcaecati
+					aliquid neque repudiandae assumenda ut cupiditate.
+				</p>
+			</div>
+		</section>
+
+		<section id="login" class="section scrollspy">
+			<div class="container">
+				<h2>Log In</h2>
+				<p>
+					Include a login form or relevant content here. Lorem ipsum dolor sit
+					amet consectetur adipisicing elit. Maxime earum eligendi, impedit
+					ratione consequuntur quia deserunt natus explicabo veritatis ipsum
+					nobis consequatur eveniet deleniti, consectetur alias repellat
+					aspernatur placeat adipisci! Eligendi aperiam nulla accusamus, illo,
+					ut itaque maiores praesentium fugiat error nobis eos aliquid dicta
+					harum ipsa placeat! Vitae nulla cum itaque voluptatum repudiandae
+					magni magnam harum natus, unde, at ipsum accusantium, atque tempore in
+					deleniti minima illum velit dolorem ullam sequi eos? Neque blanditiis
+					maiores deleniti, molestias sunt delectus inventore quisquam quae
+					voluptate sequi incidunt perspiciatis animi! Eligendi repellat totam
+					nihil repellendus beatae, corrupti dolore! Facilis necessitatibus sit
+					laborum.
+				</p>
+			</div>
+		</section>
+
+		<div style="height: 1000px"></div>
+
+		<!-- jQuery and Materialize JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!-- Custom JS -->
+		<script>
+			$(document).ready(function () {
+				$(".sidenav").sidenav();
+			});
+		</script>
+	</body>
+</html>

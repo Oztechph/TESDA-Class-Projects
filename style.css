@@ -1,0 +1,73 @@
+h1 {
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+h2 {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 1.2;
+	letter-spacing: 3px;
+}
+blockquote {
+	border-left: 5px solid #64b5f6;
+}
+.container > h3 {
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+.striped tbody tr:nth-child(even) {
+	background-color: #fff;
+	color: grey;
+}
+.highlight tr:hover td {
+	background-color: #64b5f6; /* blue lighten-2 */
+	color: #000000;
+}
+.navbar {
+	border-radius: 40px;
+	padding: 0 30px;
+}
+p {
+	letter-spacing: 1px;
+}
+.navbar-container {
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	padding: 20px;
+}
+nav ul li a {
+	color: #fff;
+	font-size: 18px;
+}
+nav {
+	border: 40px;
+}
+.right li a:hover,
+.left li a:hover {
+	border-left: 3px solid #fff;
+	border-right: 3px solid #fff;
+}
+/* Override Materialize color styling for the search icon */
+nav .input-field .material-icons {
+	color: #000000 !important; /* Change to white or preferred color */
+	background-color: #fff;
+}
+nav .input-field .material-icons:focus,
+nav .input-field .material-icons:active {
+	color: #64b5f6 !important; /* Change to white or preferred color */
+}
+/* Adjust the position if necessary */
+.fixed-action-btn {
+	bottom: 24px;
+	right: 24px;
+}
+.sidenav {
+	font-size: 30px;
+}
+
+.promo i.material-icons {
+	font-size: 48px;
+	color: red;
+}
