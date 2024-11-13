@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cards-Project</title>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<!-- Include Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1 class="blue-text center text-darken-1">Cards</h1>
+		<div class="divider blue"></div>
+		<div class="container">
+			<p>
+				Cards are a convenient means of displaying content composed of different
+				types of objects. They’re also well-suited for presenting similar
+				objects whose size or supported actions can vary considerably, like
+				photos with captions of variable length.
+			</p>
+			<h2 class="blue-text text-lighten-1">Basic Card</h2>
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card blue-grey darken-1">
+						<div class="card-content white-text">
+							<span class="card-title">Card Title</span>
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="#">This is a link</a>
+							<a href="#">This is a link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">Image Card</h2>
+			<p>Here is the standard card with an image thumbnail.</p>
+			<div class="row">
+				<div class="col s12 m7">
+					<div class="card">
+						<div class="card-image">
+							<img src="cards-images/image1.jpg" />
+							<span class="card-title">Card Title</span>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="#">This is a link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">FABs in Cards</h2>
+			<p>Here is an image card with a Floating Action Button.</p>
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card">
+						<div class="card-image">
+							<img src="cards-images/image2.jpg" />
+							<span class="card-title">Card Title</span>
+							<a class="btn-floating halfway-fab waves-effect waves-light blue"
+								><i class="material-icons">add</i></a
+							>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>Here is an image card with a large Floating Action Button.</p>
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card">
+						<div class="card-image">
+							<img src="cards-images/image2.jpg" />
+							<span class="card-title">Card Title</span>
+							<a
+								class="btn-floating halfway-fab waves-effect waves-light blue btn-large"
+								><i class="material-icons">add</i></a
+							>
+						</div>
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information. I am convenient because I require little markup to
+								use effectively.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">Horizontal Card</h2>
+			<p>Here is the standard card with a horizontal image.</p>
+			<div class="col s12 m7">
+				<div class="card horizontal">
+					<div class="card-image">
+						<img src="cards-images/image4.jpg" />
+					</div>
+					<div class="card-stacked">
+						<div class="card-content">
+							<p>
+								I am a very simple card. I am good at containing small bits of
+								information.
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="#">This is a link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">Card Reveal</h2>
+			<p>
+				Here you can add a card that reveals more information once clicked. Just
+				add the card-reveal div with a span.card-title inside to make this work.
+				Add the class activator to an element inside the card to allow it to
+				open the card reveal.
+			</p>
+			<div class="card" style="width: 600px; height: 600px">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="cards-images/image5.jpg" />
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"
+						>Card Title<i class="material-icons right">more_vert</i></span
+					>
+					<p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"
+						>Card Title<i class="material-icons right">close</i></span
+					>
+					<p>
+						Here is some more information about this product that is only
+						revealed once clicked on. <br />
+						<br />
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+						possimus nam commodi reiciendis quam deserunt, quod reprehenderit
+						minus maxime iure asperiores quas sapiente sunt eum doloribus?
+						Dolorum maxime ea atque quas similique est error cumque assumenda
+						beatae, tempora excepturi, et esse ipsa dignissimos repudiandae
+						autem? Odit mollitia possimus asperiores deserunt? <br />
+						<br />
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+						possimus nam commodi reiciendis quam deserunt, quod reprehenderit
+						minus maxime iure asperiores quas sapiente sunt eum doloribus?
+						Dolorum maxime ea atque quas similique est error cumque assumenda
+						beatae, tempora excepturi, et esse ipsa dignissimos repudiandae
+						autem? Odit mollitia possimus asperiores deserunt? <br />
+						<br />
+					</p>
+				</div>
+			</div>
+			<h5>Card Action Options</h5>
+			<p>
+				The default state is having the card-reveal go over the card-action.
+				<br />
+				<br />
+				You can make your card-action always visible by adding the class
+				sticky-action to the overall card.
+			</p>
+			<h2 class="blue-text text-lighten-1">Tabs in Cards</h2>
+			<p>
+				You can add tabs to your cards by adding a dividing cards-tabs div
+				inbetween your header content and your tab content.
+			</p>
+			<div class="card">
+				<div class="card-content">
+					<p>
+						I am a very simple card. I am good at containing small bits of
+						information. I am convenient because I require little markup to use
+						effectively.
+					</p>
+				</div>
+				<div class="card-tabs">
+					<ul class="tabs tabs-fixed-width">
+						<li class="tab"><a href="#test4">Test 1</a></li>
+						<li class="tab"><a class="active" href="#test5">Test 2</a></li>
+						<li class="tab"><a href="#test6">Test 3</a></li>
+						<!-- <li class="indicator" style="left: 95px; right: 96px   ;"></li> -->
+					</ul>
+				</div>
+				<div class="card-content grey lighten-4">
+					<div id="test4">Test 1</div>
+					<div id="test5">Test 2</div>
+					<div id="test6">Test 3</div>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">Card Sizes</h2>
+			<p>
+				If you want to have uniformly sized cards, you can use our premade size
+				classes. Just add the size class in addition to the card class. <br />
+				<br />
+			</p>
+			<!-- Card Content Small-->
+			<h5>Small</h5>
+			<p>The Small Card limits the height of the card to 300px.</p>
+			<div class="card small" style="width: 500px">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="cards-images/image6.jpg" />
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"
+						>Card Title<i class="material-icons right">more_vert</i></span
+					>
+					<p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"
+						>Card Title<i class="material-icons right">close</i></span
+					>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+						possimus nam commodi reiciendis quam deserunt, quod reprehenderit
+						minus maxime iure asperiores quas sapiente sunt eum doloribus?
+						Dolorum maxime ea atque quas similique est error cumque assumenda
+						beatae, tempora excepturi, et esse ipsa dignissimos repudiandae
+						autem? Odit mollitia possimus asperiores deserunt? <br />
+						<br />
+					</p>
+				</div>
+			</div>
+			<!-- Card Content Medium -->
+			<h5>Medium</h5>
+			<p>The Medium Card limits the height of the card to 400px.</p>
+			<div class="card medium" style="width: 500px">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="cards-images/image7.jpg" />
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"
+						>Card Title<i class="material-icons right">more_vert</i></span
+					>
+					<p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"
+						>Card Title<i class="material-icons right">close</i></span
+					>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+						possimus nam commodi reiciendis quam deserunt, quod reprehenderit
+						minus maxime iure asperiores quas sapiente sunt eum doloribus?
+						Dolorum maxime ea atque quas similique est error cumque assumenda
+						beatae, tempora excepturi, et esse ipsa dignissimos repudiandae
+						autem? Odit mollitia possimus asperiores deserunt? <br />
+						<br />
+					</p>
+				</div>
+			</div>
+			<!-- Card Content Large -->
+			<h5>Large</h5>
+			<p>The Large Card limits the height of the card to 500px.</p>
+			<div class="card large" style="width: 500px">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="cards-images/image8.jpg" />
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4"
+						>Card Title<i class="material-icons right">more_vert</i></span
+					>
+					<p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"
+						>Card Title<i class="material-icons right">close</i></span
+					>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+						possimus nam commodi reiciendis quam deserunt, quod reprehenderit
+						minus maxime iure asperiores quas sapiente sunt eum doloribus?
+						Dolorum maxime ea atque quas similique est error cumque assumenda
+						beatae, tempora excepturi, et esse ipsa dignissimos repudiandae
+						autem? Odit mollitia possimus asperiores deserunt? <br />
+						<br />
+					</p>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">Card Panel</h2>
+			<p>
+				For a simpler card with less markup, try using a card panel which just
+				has padding and a shadow effect
+			</p>
+			<div class="row">
+				<div class="col s12 m5">
+					<div class="card-panel teal">
+						<span class="white-text"
+							>I am a very simple card. I am good at containing small bits of
+							information. I am convenient because I require little markup to
+							use effectively. I am similar to what is called a panel in other
+							frameworks.
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery and Materialize JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!-- Custom JS -->
+		<script>
+			$(document).ready(function () {
+				$(".modal").modal();
+			});
+		</script>
+	</body>
+</html>

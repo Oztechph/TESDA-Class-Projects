@@ -66,8 +66,10 @@ nav .input-field .material-icons:active {
 .sidenav {
 	font-size: 30px;
 }
-
 .promo i.material-icons {
 	font-size: 48px;
 	color: red;
+}
+.parllax-container {
+	height: 600px;
 }

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modals-Project</title>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<!-- Font Awesome for Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1 class="blue-text center text-darken-1">Modals</h1>
+		<div class="divider blue"></div>
+		<div class="container">
+			<p>
+				Use a modal for dialog boxes, confirmation messages, or other content
+				that can be called up. In order for the modal to work you have to add
+				the Modal ID to the link of the trigger. To add a close button, just add
+				the class .modal-close to your button.
+			</p>
+
+			<!-- Modal Trigger -->
+			<a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+				>Modal</a
+			>
+
+			<!-- Modal Structure -->
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<h4>Modal Header</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Perferendis voluptatibus earum cupiditate ipsa porro doloremque
+						architecto pariatur atque facilis possimus! Eos quibusdam, voluptate
+						aliquid itaque repellendus debitis quaerat ipsam ratione veritatis
+						ducimus quasi blanditiis id pariatur voluptatum illum numquam
+						reiciendis ullam dolorem. Excepturi assumenda necessitatibus quasi
+						non sequi nesciunt cumque tenetur eius neque accusantium vel, quae
+						consectetur explicabo veniam adipisci, illum velit nobis similique
+						autem. Minus nam rem sapiente! Distinctio culpa ducimus numquam
+						sequi dolore provident officiis, et, quasi id quia repellat dolorum
+						cumque, accusantium necessitatibus voluptate eveniet incidunt hic.
+						Rem incidunt nisi expedita aspernatur aperiam id nihil placeat
+						iusto!
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat"
+						>Disagree</a
+					>
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat"
+						>Agree</a
+					>
+				</div>
+			</div>
+			<h2 class="blue-text text-lighten-1">Modals with Button trigger</h2>
+			<p>
+				If you prefer to use a button to open a modal specify the Modal ID in
+				data-target rather than the href attribute.
+			</p>
+			<pre><code>&lt;button data-target="modal1" class="btn modal-trigger"&gt;Modal&lt;/button&gt;</code></pre>
+
+			<br />
+			<h2 class="blue-text text-lighten-1">Initializatiion</h2>
+			<p>To open a modal using a trigger:</p>
+			<pre><code>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function(){
+                $('.modal').modal();
+            });
+            </code></pre>
+			<br />
+			<h2 class="blue-text text-lighten-1">Options</h2>
+			<p>
+				You can customize the behavior of each modal using these options. For
+				example, you can call a custom function to run when a modal is
+				dismissed. To do this, just place your function in the intialization
+				code as shown below.
+			</p>
+			<table class="striped">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>opacity</td>
+						<td>Number</td>
+						<td>0.5</td>
+						<td>Opacity of the modal overlay.</td>
+					</tr>
+					<tr>
+						<td>inDuration</td>
+						<td>Number</td>
+						<td>250</td>
+						<td>Transition in duration in milliseconds.</td>
+					</tr>
+					<tr>
+						<td>outDuration</td>
+						<td>Number</td>
+						<td>250</td>
+						<td>Transition out duration in milliseconds.</td>
+					</tr>
+					<tr>
+						<td>onOpenStart</td>
+						<td>Function</td>
+						<td>null</td>
+						<td>Callback function called before modal is opened.</td>
+					</tr>
+					<tr>
+						<td>onOpenEnd</td>
+						<td>Function</td>
+						<td>null</td>
+						<td>Callback function called after modal is opened.</td>
+					</tr>
+					<tr>
+						<td>onCloseStart</td>
+						<td>Function</td>
+						<td>null</td>
+						<td>Callback function called before modal is closed.</td>
+					</tr>
+					<tr>
+						<td>onCloseEnd</td>
+						<td>Function</td>
+						<td>null</td>
+						<td>Callback function called after modal is closed.</td>
+					</tr>
+					<tr>
+						<td>preventScrolling</td>
+						<td>Boolean</td>
+						<td>true</td>
+						<td>Prevent page from scrolling while modal is open.</td>
+					</tr>
+					<tr>
+						<td>dismissible</td>
+						<td>Boolean</td>
+						<td>true</td>
+						<td>Allow modal to be dismissed by keyboard or overlay click.</td>
+					</tr>
+					<tr>
+						<td>startingTop</td>
+						<td>String</td>
+						<td>'4%'</td>
+						<td>Starting top offset</td>
+					</tr>
+					<tr>
+						<td>endingTop</td>
+						<td>String</td>
+						<td>'10%'</td>
+						<td>Ending top offset</td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+
+			<h2 class="blue-text text-lighten-1">Methods</h2>
+			<blockquote>
+				Because jQuery is no longer a dependency, all the methods are called on
+				the plugin instance. You can get the plugin instance like this:
+				<pre style="margin-left: -200px"><code>
+				var instance = M.Modal.getInstance(elem); <br>
+
+				/* jQuery Method Calls <br>
+					You can still use the old jQuery plugin method calls. <br>
+					But you won't be able to access instance properties. <br>
+					<br>
+					$('.modal').modal('methodName'); <br>
+					$('.modal').modal('methodName', paramName); <br>
+				*/
+				</code></pre>
+			</blockquote>
+			<h2 class="blue-text text-lighten-1">Properties</h2>
+			<table class="striped">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>el</td>
+						<td>Element</td>
+						<td>The DOM element the plugin was initialized with.</td>
+					</tr>
+					<tr>
+						<td>options</td>
+						<td>Object</td>
+						<td>The options the instance was initialized with.</td>
+					</tr>
+					<tr>
+						<td>isOpen</td>
+						<td>Boolean</td>
+						<td>If the modal is open.</td>
+					</tr>
+					<tr>
+						<td>id</td>
+						<td>string</td>
+						<td>ID of the modal element</td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+
+			<h2 class="blue-text text-lighten-1">Modals with Fixed Footer</h2>
+			<p>
+				If you have content that is very long and you want the action buttons to
+				be visible all the time, you can add the modal-fixed-footer class to the
+				modal.
+			</p>
+			<!-- Modal Trigger -->
+			<a class="waves-effect waves-light btn modal-trigger" href="#modal2"
+				>Modal with Fixed Footer</a
+			>
+
+			<!-- Modal Structure -->
+			<div id="modal2" class="modal modal-fixed-footer">
+				<div class="modal-content">
+					<h4>Modal with Fixed Footer Header</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+						modi, dignissimos nihil aut aperiam praesentium illum culpa nostrum
+						consectetur esse dolores unde deserunt rerum ipsum animi facere
+						porro omnis voluptate neque ab quia fuga assumenda possimus. Ipsam
+						iusto eius a optio doloremque impedit. Esse facere omnis ratione
+						nesciunt nulla totam. <br />
+						<br />
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+						modi, dignissimos nihil aut aperiam praesentium illum culpa nostrum
+						consectetur esse dolores unde deserunt rerum ipsum animi facere
+						porro omnis voluptate neque ab quia fuga assumenda possimus. Ipsam
+						iusto eius a optio doloremque impedit. Esse facere omnis ratione
+						nesciunt nulla totam. <br />
+						<br />
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+						modi, dignissimos nihil aut aperiam praesentium illum culpa nostrum
+						consectetur esse dolores unde deserunt rerum ipsum animi facere
+						porro omnis voluptate neque ab quia fuga assumenda possimus. Ipsam
+						iusto eius a optio doloremque impedit. Esse facere omnis ratione
+						nesciunt nulla totam. <br />
+						<br />
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+						modi, dignissimos nihil aut aperiam praesentium illum culpa nostrum
+						consectetur esse dolores unde deserunt rerum ipsum animi facere
+						porro omnis voluptate neque ab quia fuga assumenda possimus. Ipsam
+						iusto eius a optio doloremque impedit. Esse facere omnis ratione
+						nesciunt nulla totam. <br />
+						<br />
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+						modi, dignissimos nihil aut aperiam praesentium illum culpa nostrum
+						consectetur esse dolores unde deserunt rerum ipsum animi facere
+						porro omnis voluptate neque ab quia fuga assumenda possimus. Ipsam
+						iusto eius a optio doloremque impedit. Esse facere omnis ratione
+						nesciunt nulla totam. <br />
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat"
+						>Disagree</a
+					>
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat"
+						>Agree</a
+					>
+				</div>
+			</div>
+			<br />
+			<h2 class="blue-text text-lighten-1">Bottom Sheet Modals</h2>
+			<p>
+				Bottom Sheet Modals are good for displaying actions to the user on the
+				bottom of a screen. They still act the same as regular modals.
+			</p>
+			<!-- Modal Trigger -->
+			<a
+				class="waves-effect waves-light btn modal-trigger bottom-sheet"
+				href="#modal3"
+				>Modal Bottom Sheet Style</a
+			>
+
+			<!-- Modal Structure -->
+			<div id="modal3" class="modal bottom-sheet">
+				<div class="modal-content">
+					<h4>Modal Bottom Sheet Header</h4>
+					<p>This is a bottom sheet modal. It slides up from the bottom.</p>
+				</div>
+				<div class="divider"></div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat"
+						>Disagree</a
+					>
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat"
+						>Agree</a
+					>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery and Materialize JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!-- Custom JS -->
+		<script>
+			$(document).ready(function () {
+				$(".modal").modal();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Portfolio Project - Lorenzo Tano</title>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<!-- Include Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<nav class="navbar">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo" style="padding-left: 10px"
+					>Dev<span>Zero</span></a
+				>
+				<a
+					href="#"
+					data-target="mobile-nav"
+					class="sidenav-trigger right hide-on-large"
+				>
+					<i class="fas fa-bars"></i>
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Side Navigation for Mobile -->
+		<ul class="sidenav center" id="mobile-nav">
+			<a href="index.html" class="brand-logo">Dev<span>Zero</span></a>
+			<div class="divider"></div>
+			<li><a href="index.html">Home</a></li>
+			<li class="active"><a href="about.html">About</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<div class="divider"></div>
+			<li>
+				<div class="social-icons">
+					<a href="https://github.com/yourprofile" target="_blank"
+						><i class="fab fa-github fa-lg"></i
+					></a>
+					<a href="https://facebook.com/yourprofile" target="_blank"
+						><i class="fab fa-facebook fa-lg"></i
+					></a>
+					<a href="https://instagram.com/yourprofile" target="_blank"
+						><i class="fab fa-instagram fa-lg"></i
+					></a>
+				</div>
+			</li>
+		</ul>
+		<!-- About Content -->
+		<div class="row">
+			<div class="container center" style="margin-top: 100px">
+				<h1 class="center">About</h1>
+				<!-- Card 1: Introduction -->
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title">About Me</span>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam,
+								quisquam impedit tempore voluptate vitae magni optio harum
+								reiciendis magnam culpa quae debitis nobis aliquid ex nesciunt
+								ipsum. Eaque, quibusdam aliquid expedita aliquam natus
+								asperiores culpa nam quod sapiente?
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 2: Skills & Experience -->
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title">Skills & Experience</span>
+							<ul>
+								<li><i class="fab fa-html5"></i> HTML</li>
+								<li><i class="fab fa-css3-alt"></i> CSS</li>
+								<li><i class="fab fa-js"></i> JavaScript</li>
+								<li><i class="fab fa-java"></i> Java</li>
+								<li><i class="fab fa-python"></i> Python</li>
+								<li><i class="fas fa-code"></i> C</li>
+								<li><i class="fas fa-code"></i> C#</li>
+								<li><i class="fab fa-php"></i> PHP</li>
+								<li><i class="fas fa-database"></i> MySQL</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 3: My Approach -->
+				<div class="col s12 m6 offset-m3 l4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title">My Approach</span>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellat ipsam quibusdam, distinctio corrupti ut nostrum! Fuga, quae qui eius est deleniti debitis doloremque.
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="portfolio.html">View My Portfolio</a>
+							<a href="contact.html">Contact Me</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer class="footer">&copy;2024<span class="span"> Dev</span>Zero</footer>
+		<!-- jQuery and Materialize JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/yourkitid.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Custom JS -->
+		<script>
+			$(document).ready(function () {
+				$(".sidenav").sidenav({
+					edge: "right", // This will make the sidenav open from the right
+				});
+			});
+		</script>
+	</body>
+</html>

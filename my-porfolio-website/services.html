@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Portfolio Project - Lorenzo Tano</title>
+		<!-- Materialize CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<!-- Include Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<nav class="navbar">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo" style="padding-left: 10px"
+					>Dev<span>Zero</span></a
+				>
+				<a
+					href="#"
+					data-target="mobile-nav"
+					class="sidenav-trigger right hide-on-large"
+				>
+					<i class="fas fa-bars"></i>
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="active"><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Side Navigation for Mobile -->
+		<ul class="sidenav center" id="mobile-nav">
+			<a href="index.html" class="brand-logo">Dev<span>Zero</span></a>
+			<div class="divider"></div>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li class="active"><a href="services.html">Services</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<div class="divider"></div>
+			<li>
+				<div class="social-icons">
+					<a href="https://github.com/yourprofile" target="_blank"
+						><i class="fab fa-github fa-lg"></i
+					></a>
+					<a href="https://facebook.com/yourprofile" target="_blank"
+						><i class="fab fa-facebook fa-lg"></i
+					></a>
+					<a href="https://instagram.com/yourprofile" target="_blank"
+						><i class="fab fa-instagram fa-lg"></i
+					></a>
+				</div>
+			</li>
+		</ul>
+		<!-- Services Content -->
+		<div class="section" style="margin-top: 6px">
+			<section id="services" class="services-section">
+				<div class="container">
+					<h2 class="center-align">Our Services</h2>
+					<div class="row">
+						<!-- Service 1 -->
+						<div class="col s12 m6 l4">
+							<div class="card">
+								<div class="card-image">
+									<img
+										src="portfolio-images/image-services1.jpg"
+										alt="Service 1"
+									/>
+									<span class="card-title">Web Development</span>
+								</div>
+								<div class="card-content">
+									<p>
+										We offer custom web development services, using the latest
+										technologies to create responsive, user-friendly websites.
+									</p>
+								</div>
+								<div class="card-action">
+									<a href="#">Learn More</a>
+								</div>
+							</div>
+						</div>
+						<!-- Service 2 -->
+						<div class="col s12 m6 l4">
+							<div class="card">
+								<div class="card-image">
+									<img
+										src="portfolio-images/image-services2.jpg"
+										alt="Service 2"
+									/>
+									<span class="card-title">UI/UX Design</span>
+								</div>
+								<div class="card-content">
+									<p>
+										We specialize in UI/UX design to ensure that your website or
+										app provides a seamless and engaging experience for your
+										users, with a focus on functionality and aesthetics.
+									</p>
+								</div>
+								<div class="card-action">
+									<a href="#">Learn More</a>
+								</div>
+							</div>
+						</div>
+						<!-- Service 3 -->
+						<div class="col s12 m6 l4">
+							<div class="card">
+								<div class="card-image">
+									<img
+										src="portfolio-images/image-services3.jpg"
+										alt="Service 3"
+									/>
+									<span class="card-title">SEO Optimization</span>
+								</div>
+								<div class="card-content">
+									<p>
+										We offer SEO services to help improve your website’s
+										visibility on search engines, ensuring your content reaches
+										the right audience effectively and organically.
+									</p>
+								</div>
+								<div class="card-action">
+									<a href="#">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- Footer -->
+		<footer class="footer">&copy;2024<span class="span"> Dev</span>Zero</footer>
+
+		<div style="height: 1000px"></div>
+
+		<!-- jQuery and Materialize JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/yourkitid.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Custom JS -->
+		<script>
+			$(document).ready(function () {
+				$(".sidenav").sidenav({
+					edge: "right", // This will make the sidenav open from the right
+				});
+			});
+		</script>
+	</body>
+</html>

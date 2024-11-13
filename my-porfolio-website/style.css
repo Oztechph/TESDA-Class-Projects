@@ -1,0 +1,172 @@
+:root {
+	--bg-color: black;
+	--primary-color: white;
+	--secondary-color: yellow;
+	--border-clr: green;
+}
+.navbar {
+	background-color: var(--bg-color); /* edit to black */
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-bottom: 20px;
+}
+.nav-wrapper .brand-logo {
+	color: var(--secondary-color);
+	font-size: 28px;
+	font-weight: 600;
+}
+.nav-wrapper span {
+	color: var(--primary-color);
+	text-transform: uppercase;
+}
+.navbar ul li a {
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--primary-color);
+}
+.navbar ul li.active a,
+.sidenav li.active a {
+	color: yellow;
+}
+.sidenav {
+	background-color: black;
+	width: 60%;
+}
+nav ul li:hover a,
+.sidenav li:hover {
+	background: var(--secondary-color);
+	color: var(--bg-color);
+	width: 100%;
+}
+.sidenav li a {
+	color: var(--primary-color);
+}
+.sidenav .brand-logo {
+	color: var(--secondary-color);
+	font-size: 20px;
+	font-weight: bold;
+}
+.sidenav .brand-logo span{
+	color: var(--primary-color);
+}
+.brand-logo span {
+	color: var(--primary-color);
+}
+.sidenav .social-icons a {
+	margin: 10px;
+	font-size: 25px;
+}
+/* Content Style */
+body {
+	background-color: var(--secondary-color);
+}
+.profile-img {
+	margin-top: 120px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+img {
+	border: 18px solid black;
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+}
+.content {
+	max-width: 800px;
+	color: black;
+	text-align: center;
+}
+.content h1 {
+	font-size: 35px;
+}
+.content h3 {
+	font-size: 40px;
+	color: blue;
+}
+.content p {
+	font-size: 16px;
+	font-weight: 300;
+	/* margin-top: 1px; */
+	letter-spacing: 2px;
+}
+.wrapper {
+	font-size: 50px;
+}
+.wrapper .static-txt {
+	color: black;
+	font-size: 38px;
+	font-weight: 400;
+	position: relative;
+}
+.wrapper .dynamic-txts {
+	margin-left: 15px;
+	height: 90px;
+	line-height: 90px;
+	overflow: hidden;
+}
+.dynamic-txts li {
+	list-style: none;
+	font-weight: 320;
+	color: var(--bg-color);
+	position: relative;
+	top: 0;
+	animation: slide 6s steps(4) infinite;
+}
+@keyframes slide {
+	100% {
+		top: -360px;
+	}
+}
+.dynamic-txts li span {
+	position: relative;
+}
+.dynamic-txts li span::after {
+	content: "";
+	position: absolute;
+	height: 90px;
+	background: var(--secondary-color);
+	width: 100%;
+	left: 0;
+	border-left: 3px solid black;
+	animation: typing 1.5s steps(14) infinite;
+}
+@keyframes typing {
+	100% {
+		left: 100%;
+		margin: 0 -35px 0 35px;
+	}
+}
+.action-buttons {
+	margin-top: 10px;
+}
+.card {
+	min-height: 320px; /* Adjust height as needed */
+}
+.btn,
+.btn-large,
+.btn-small {
+	background-color: var(--primary-color);
+	color: var(--bg-color);
+	font-weight: 500;
+	border: 1px solid var(--border-clr);
+}
+/* Footer Style */
+.footer {
+	background-color: var(--bg-color);
+	color: var(--primary-color);
+	text-align: center;
+	padding: 20px;
+	font-size: 20px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: max-content;
+	text-transform: capitalize;
+	z-index: 1;
+}
+.footer .span{
+	color: var(--secondary-color);
+}
